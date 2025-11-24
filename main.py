@@ -81,7 +81,7 @@ def main_menu(card_id):
     print("="*30)
     print("Python atm machine menu")
     print("="*30)
-    print("1 . Withdraw money")
+    print("1. Withdraw money")
     print("2. Deposit money")
     print("3. Check balance")
     print("4. Change pin")

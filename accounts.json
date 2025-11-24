@@ -1,11 +1,37 @@
 {
-
-  "1001": {
-    "name" : "pradeep",
-    "pin": "1234",
-    "balance": 0,
-    "locked" : true,
-    "attempts": 0
-  }
-
+    "1001": {
+        "name": "pradeep",
+        "pin": "1234",
+        "balance": 0,
+        "locked": false,
+        "attempts": 0
+    },
+    "1002": {
+        "name": "Prince",
+        "pin": "1111",
+        "balance": 0,
+        "locked": false,
+        "attempts": 0
+    },
+    "1003": {
+        "name": "vaibhav",
+        "pin": "9876",
+        "balance": 0,
+        "locked": false,
+        "attempts": 0
+    },
+    "1004": {
+        "name": "Sid",
+        "pin": "5678",
+        "balance": 0,
+        "locked": false,
+        "attempts": 0
+    },
+    "7020": {
+        "name": "yash",
+        "pin": 1234,
+        "balance": 100,
+        "locked": false,
+        "attempts": 0
+    }
 }
