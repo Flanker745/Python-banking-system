@@ -1,0 +1,16 @@
+{
+    "1001": {
+        "name": "Pradeep",
+        "pin": "1111",
+        "balance": 0,
+        "locked": false,
+        "attempts": 0
+    },
+    "1002": {
+        "name": "rahul",
+        "pin": "1111",
+        "balance": 200,
+        "locked": false,
+        "attempts": 0
+    }
+}
