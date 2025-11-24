@@ -27,7 +27,7 @@ def login_page():
         if choice == 1:
             user_login_page()
         elif choice ==2:
-            admin_login_page()
+            admin_login()
         elif choice == 3:
             print("Thanks for using Py banking system , visit again")
             break
@@ -79,14 +79,14 @@ def user_login_page():
 def main_menu(card_id):
     account = Accounts(card_id)
     print("="*30)
-    print("PYTHON ATM - MAIN MENU")
+    print("Python atm machine menu")
     print("="*30)
-    print("1. Withdraw Money")
-    print("2. Deposit Money")
-    print("3. Check Balance")
-    print("4. Change PIN")
-    print("5. Close Account")
-    print("6. Transfer Money")
+    print("1 . Withdraw money")
+    print("2. Deposit money")
+    print("3. Check balance")
+    print("4. Change pin")
+    print("5. Close account")
+    print("6. Transfer money")
     print("7. Exit (Logout)")
     print("-"*30)
     try:
@@ -127,6 +127,31 @@ def admin_login_page():
         admin.add_user()
     elif choice == 2:
         admin.delete_user()
+    elif choice == 3:
+        admin.unlock_user()
+    elif choice == 4:
+        print("Thanks for using Py banking system , visit again")
+    else:
+        print("Invalid choice Please try again")
 
+
+def admin_login():
+    admin_data  = Storage.load_admin()
+    print("-" * 30)
+    try:
+        username = str(input("Enter Admin Username : "))
+    except:
+        print("⚠️ Please enter a correct input !")
+    if admin_data["username"] != username:
+        return print("⚠️ Invalid Username")
+    else:
+        try:
+            password = str(input("Enter Admin Password : "))
+        except:
+            print("⚠️ Please enter a correct input !")
+        if admin_data["password"] != password:
+            return print("⚠️ Invalid Password")
+        else:
+            admin_login_page()
 
 login_page()

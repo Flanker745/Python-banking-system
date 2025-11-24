@@ -47,3 +47,16 @@ class Admin:
         user_data.pop(card_id)
         storage.save_accounts(user_data)
         print("✅ done")
+
+    def unlock_user(self):
+        try:
+            card_id = str(input("Enter Card Number : "))
+        except:
+            print("⚠️ Please enter a correct input !")
+        if card_id not in user_data:
+            print("Invalid Card Number!")
+            return
+        user_data[card_id]["locked"] = True
+        user_data[card_id]["attempts"] = 0
+        storage.save_accounts(user_data)
+        print("Done ✅")
